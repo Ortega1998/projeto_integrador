@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Estoque de Beleza Ramos Cabeleireira</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <h1>Espaço Ramos Cabeleireira</h1>
+    <style>
+        body {
+            background-image: url(https://a.imagem.app/BH1cMt.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <!-- Formulário de Cadastro -->
+    <div id="wrap">
+        <input type="text" id="nomeProduto" placeholder="Nome:">
+        <input type="number" id="quantidadeProduto" placeholder="Quantidade">
+        <input type="number" id="precoProduto" step="0.01" placeholder="Preço do produto">
+        <select id="categoria">
+            <option value="">Selecione a categoria</option>
+            <option value="shampoo">Shampoo</option>
+            <option value="condicionador">Condicionador</option>
+            <option value="finalizador">Finalizador</option>
+            <option value="mascara">Máscara</option>
+            <option value="kit">Kit</option>
+            <option value="outro">Outro</option>
+        </select>
+        <input type="date" id="validadeProduto" placeholder="Validade">
+        <textarea id="descricaoProduto" placeholder="Descrição"></textarea>
+    </div>
+
+    <!-- Botões -->
+    <div id="botoes">
+        <button id="botaoEntrada">Entrada</button>
+        <button id="botaoSaida">Excluir</button>
+        <button id="excluirCompleto">Saída</button>
+    </div>
+
+    <!-- Saída da Tabela -->
+    <div id="saida">
+        <h2>Resultados</h2>
+        <table border="0" width="100%" height="5%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Preço Venda</th>
+                    <th>Categoria</th>
+                    <th>Validade</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-produtos">
+                <!-- Os dados serão inseridos dinamicamente aqui -->
+            </tbody>
+        </table>        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

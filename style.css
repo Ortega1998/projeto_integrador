@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Bege claro */
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    color: #333333; /* Cinza escuro */
+}
+
+#wrap, #botoes, #saida {
+    text-align: center;
+    border: 1px solid #e0c2a3; /* Bege */
+    padding: 10px;
+    background-color: rgba(231, 172, 229, 0.8);
+    margin: 10px auto;
+    max-width: 95%;
+}
+
+#wrap input, #wrap select, #wrap textarea {
+    width: 80%;
+    max-width: 300px;
+    height: 30px;
+    margin: 5px 0;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+    vertical-align: middle; /* Alinha verticalmente ao centro */
+}
+
+#wrap textarea {
+    height: 30px; /* Mantém a altura igual aos outros campos */
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button {
+    width: 80%;
+    max-width: 300px;
+    height: 35px;
+    background-color: #336633; /* Verde escuro */
+    color: #ffffff; /* Branco */
+    margin: 5px 0;
+}
+
+button:hover, tr:hover {
+    background-color: #447744; /* Verde escuro (hover) */
+    color: #ffffff;
+}
+
+#saida input {
+    height: 20px;
+    width: 20px;
+    margin: 2px;
+}
+
+table {
+    border: solid #e0c2a3; /* Bege */
+    background-color: rgba(134, 134, 132, 0.8);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+#filtros {
+    display: flex; /* Alinha os elementos em linha */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    margin-bottom: 10px; /* Adiciona espaço abaixo dos filtros */
+}
+
+#filtros input, #filtros select {
+    margin: 0 5px; /* Adiciona espaço entre os elementos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #wrap input, #wrap select, #wrap textarea {
+        width: 95%;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before { content: "ID"; }
+    td:nth-of-type(2):before { content: "Nome"; }
+    td:nth-of-type(3):before { content: "Quantidade"; }
+    td:nth-of-type(4):before { content: "Preço"; }
+    td:nth-of-type(5):before { content: "Categoria"; }
+    td:nth-of-type(6):before { content: "Validade"; }
+    td:nth-of-type(7):before { content: "Descrição"; }
+    td:nth-of-type(8):before { content: "Imagem"; }
+}
